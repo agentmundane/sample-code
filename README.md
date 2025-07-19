@@ -219,7 +219,7 @@ Each application is optimized for static hosting and can be deployed to:
 
 For support, feature requests, or bug reports:
 
-- **Email**: [support@agentmundane.com](mailto:john@agentmundane.com)
+- **Email**: [john@agentmundane.com](mailto:john@agentmundane.com)
 ---
 
 <div align="center">

@@ -224,24 +224,11 @@ All UI components follow the shadcn/ui design system with custom AgentMundane th
 - Follow the existing code style and component patterns
 - Update documentation for new features
 
-## 📄 License
-
-This project is proprietary software owned by AgentMundane. All rights reserved.
-
 ## 🆘 Support
 
 For support, feature requests, or bug reports:
 
-- **Email**: [support@agentmundane.com](mailto:john@agentmundane.com)
-
-## 🚀 What's Next?
-
-- [ ] Interactive slide animations
-- [ ] Client-specific presentation templates
-- [ ] Real-time presentation sharing
-- [ ] Analytics and engagement tracking
-- [ ] Integration with presentation platforms
-- [ ] Custom slide builder interface
+- **Email**: [john@agentmundane.com](mailto:john@agentmundane.com)
 
 ---
 

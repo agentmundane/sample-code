@@ -226,24 +226,11 @@ All UI components follow the shadcn/ui design system with custom AgentMundane th
 - Follow the existing code style and component patterns
 - Update documentation for new features
 
-## 📄 License
-
-This project is proprietary software owned by AgentMundane. All rights reserved.
-
 ## 🆘 Support
 
 For support, feature requests, or bug reports:
 
-- **Email**: [support@agentmundane.com](mailto:john@agentmundane.com)
-
-## 🚀 What's Next?
-
-- [ ] Real-time collaboration features
-- [ ] Additional export formats (PDF, SVG)
-- [ ] Canvas sharing and team workspaces
-- [ ] Integration with popular project management tools
-- [ ] Advanced analytics and insights
-- [ ] Custom template builder
+- **Email**: [john@agentmundane.com](mailto:john@agentmundane.com)
 
 ---
 
