@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sales Sequence Generator Design System - Acelo Branding
+All colors MUST be HSL. Typography: Montserrat (headings), Roboto (body)
+Primary: Acelo Navy (#003565), Secondary: Acelo Orange (#ff8b04)
+*/
+
+@layer base {
+  :root {
+    /* Acelo Brand Colors */
+    --acelo-navy: 208 100% 20%;           /* #003565 */
+    --acelo-orange: 29 100% 51%;          /* #ff8b04 */
+    
+    /* Core Design System */
+    --background: 0 0% 100%;              /* Pure white */
+    --foreground: 208 100% 20%;           /* Acelo Navy for main text */
+
+    --card: 0 0% 100%;                    /* White cards */
+    --card-foreground: 208 100% 20%;      /* Navy text on cards */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 208 100% 20%;
+
+    --primary: 208 100% 20%;              /* Acelo Navy */
+    --primary-foreground: 0 0% 100%;      /* White text on navy */
+
+    --secondary: 0 0% 96%;                /* Light grey */
+    --secondary-foreground: 208 100% 20%; /* Navy text on light grey */
+
+    --muted: 0 0% 96%;                    /* Light grey for muted elements */
+    --muted-foreground: 0 0% 45%;         /* Medium grey text */
+
+    --accent: 29 100% 51%;                /* Acelo Orange for accents */
+    --accent-foreground: 0 0% 100%;       /* White text on orange */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;                   /* Light grey borders */
+    --input: 0 0% 96%;                    /* Light grey input backgrounds */
+    --ring: 29 100% 51%;                  /* Orange focus rings */
+
+    /* Tier-specific colors */
+    --gold: 45 100% 51%;                  /* Gold tier color */
+    --silver: 0 0% 75%;                   /* Silver tier color */
+    --bronze: 30 85% 55%;                 /* Bronze tier color */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%), hsl(45 100% 60%));
+    --gradient-silver: linear-gradient(135deg, hsl(0 0% 75%), hsl(0 0% 85%));
+    --gradient-bronze: linear-gradient(135deg, hsl(30 85% 55%), hsl(30 85% 65%));
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  /* Typography */
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Tier Card Styles */
+  .tier-card {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer;
+  }
+  
+  .tier-card.selected {
+    @apply ring-2 ring-accent shadow-lg;
+  }
+  
+  /* Sequence Timeline */
+  .sequence-step {
+    @apply flex items-start gap-4 p-4 rounded-lg bg-card border border-border;
+  }
+  
+  .sequence-icon {
+    @apply w-10 h-10 rounded-full flex items-center justify-center text-white font-medium;
+  }
+  
+  /* Channel-specific colors */
+  .channel-email {
+    @apply bg-blue-500;
+  }
+  
+  .channel-linkedin {
+    @apply bg-blue-700;
+  }
+  
+  .channel-phone {
+    @apply bg-green-500;
+  }
+  
+  .channel-interaction {
+    @apply bg-purple-500;
+  }
+  
+  /* Enhanced tier cards */
+  .tier-card:hover {
+    @apply border-accent/30;
+  }
+  
+  /* Sequence timeline connector */
+  .sequence-connector {
+    @apply w-px bg-border;
+  }
+}
